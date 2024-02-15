@@ -1,11 +1,25 @@
 // Code your orbitCircumference function here:
 
+function orbitCircumference ( radius) {
+  2*Math.PI*radius
+}
+
+// function orbitCircumference(radius) {
+//   return Math.round(2* Math.PI*radius)
+// }
 
 // Code your missionDuration function here:
+function missionDuration(orbits,radius = 2.000,speed = 28.000){
+  let time = (orbits * orbitCircumference(radius)) / speed;
+  return Math.rounds(time*100)/100;
 
+}
 
 // Copy/paste your selectRandomEntry function here:
-
+let selectRandomEntry = function (ids) {
+  let index = Math.floor(Math.random()* ids.length);
+  return ids[index];
+}
 
 // Code your oxygenExpended function here:
 
